@@ -1,0 +1,8 @@
+build
+.gradle
+.idea
+.kotlin
+out
+
+# too large
+measurements.txt
