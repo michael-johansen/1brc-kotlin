@@ -8,9 +8,11 @@ import kotlin.streams.asSequence
 import kotlin.time.measureTime
 
 object Calculate {
-    private const val FILE = "./measurements.txt"
+    const val FILE = "./measurements.txt"
 
-    // Total time: 306363 ms (~10% cpu, <150MB, underutilized IO)
+    // ThinkPad: Total time: 306363 ms (~100% on 1 core, <150MB, underutilized IO)
+    // Desktop: Total time: 75865 ms (~100% on 1 core, <150MB, underutilized IO)
+    // Desktop: compared to CalculateAverage_thomaswue 1652 ms (best java solution)
     @JvmStatic
     fun main(args: Array<String>) {
         println("Starting")

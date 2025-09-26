@@ -1,8 +1,5 @@
 package dev.michaeljohansen.michael
 
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
-import kotlinx.coroutines.runBlocking
 import java.lang.System.currentTimeMillis
 import java.nio.file.Files
 import java.nio.file.Path
