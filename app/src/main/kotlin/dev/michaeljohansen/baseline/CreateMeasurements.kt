@@ -1,6 +1,5 @@
-package dev.michaeljohansen.michael
+package dev.michaeljohansen.baseline
 
-import java.lang.System.currentTimeMillis
 import java.nio.file.Files
 import java.nio.file.Path
 import java.util.concurrent.ThreadLocalRandom
@@ -428,20 +427,20 @@ object CreateMeasurements {
 
     @JvmStatic
     fun main(args: Array<String>) {
-        val start = currentTimeMillis()
+        val start = System.currentTimeMillis()
         val size = argsToSize(args)
         val random = ThreadLocalRandom.current()
         Files.newBufferedWriter(MEASUREMENT_FILE).use { bw ->
             for (i in 0..<size) {
                 if (i > 0 && i % 50000000 == 0) {
-                    println("Wrote $i measurements in ${currentTimeMillis() - start} ms")
+                    println("Wrote $i measurements in ${System.currentTimeMillis() - start} ms")
                 }
                 val nextInt = random.nextInt(stations.size)
                 val station = stations[nextInt]
                 bw.write("${station.id};${station.measurement()}\n")
             }
         }
-        println("Created file with $size measurements in ${currentTimeMillis() - start} ms")
+        println("Created file with $size measurements in ${System.currentTimeMillis() - start} ms")
     }
 
     fun argsToSize(args: Array<String>): Int {

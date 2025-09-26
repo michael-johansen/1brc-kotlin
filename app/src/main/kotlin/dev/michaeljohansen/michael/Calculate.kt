@@ -20,6 +20,8 @@ object Calculate {
         println("Working Directory = ${getProperty("user.dir")}");
     }
 
+    // Desktop: 30 sec
+    // Laptop: 3 min
     @JvmStatic
     fun main(args: Array<String>) {
         FileChannel.open(Path.of(FILE), StandardOpenOption.READ).use { channel ->

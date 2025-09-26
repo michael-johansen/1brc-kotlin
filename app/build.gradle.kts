@@ -39,7 +39,7 @@ java {
 
 application {
     // Define the main class for the application.
-    // mainClass = "dev.michaeljohansen.michael.CreateMeasurements"
+    // mainClass = "dev.michaeljohansen.baseline.CreateMeasurements"
     mainClass = "dev.michaeljohansen.baseline.Calculate"
     // mainClass = "dev.michaeljohansen.michael.Calculate"
 }
